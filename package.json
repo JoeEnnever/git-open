@@ -4,7 +4,7 @@
   "description": "Type `git pr` to open the GitHub page or website for a PR for the current branch.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JoeEnnever/git-open.git"
+    "url": "https://github.com/JoeEnnever/git-pr.git"
   },
   "keywords": [
     "git",
@@ -16,7 +16,7 @@
   "author": "Joe Ennever",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JoeEnnever/git-open/issues"
+    "url": "https://github.com/JoeEnnever/git-pr/issues"
   },
-  "homepage": "https://github.com/JoeEnnever/git-open"
+  "homepage": "https://github.com/JoeEnnever/git-pr"
 }
