@@ -1,23 +1,22 @@
 {
-  "name": "git-open",
+  "name": "git-pr",
   "version": "1.0.2",
-  "description": "Type `git open` to open the GitHub page or website for a repository.",
+  "description": "Type `git pr` to open the GitHub page or website for a PR for the current branch.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulirish/git-open.git"
+    "url": "https://github.com/JoeEnnever/git-open.git"
   },
   "keywords": [
     "git",
     "cli"
   ],
   "bin": {
-    "git-open": "git-open",
-    "git-home" : "git-open"
+    "git-pr": "git-pr",
   },
-  "author": "Paul Irish",
+  "author": "Joe Ennever",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/paulirish/git-open/issues"
+    "url": "https://github.com/JoeEnnever/git-open/issues"
   },
-  "homepage": "https://github.com/paulirish/git-open"
+  "homepage": "https://github.com/JoeEnnever/git-open"
 }

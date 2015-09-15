@@ -1,15 +1,13 @@
-# git-open
+# git-pr
 
-Type `git open` to open the GitHub page or website for a repository in your browser.
+Type `git pr` to open the GitHub page or website to open a PR for the current branch
 
 ## Usage
-    git open [remote-name] [branch-name]
-
-![git open2015-01-24 13_51_18](https://cloud.githubusercontent.com/assets/39191/5889192/244a0b72-a3d0-11e4-8ab9-55fc64228aaa.gif)
+    git pr [remote-name] [branch-name]
 
 ### Examples
-    $ git open
-    > open https://github.com/REMOTE_ORIGIN_USER/CURRENT_REPO/tree/CURRENT_BRANCH
+    $ git pr
+    > open https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/compare/CURRENT_BRANCH?expand=1
 
     $ git open upstream
     > open https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/tree/CURRENT_BRANCH
@@ -22,34 +20,19 @@ Type `git open` to open the GitHub page or website for a repository in your brow
 
 
 ```sh
-npm install --global git-open
+npm install --global git-pr
 ```
 
 
 #### Supported:
 * Github.com
-* Gists on Github
-* Bitbucket
-* Atlassian Stash
-* Gitlab.com
-* Gitlab custom hosted (see below)
-
-
-## Gitlab support
-To configure gitlab support you need to set gitopen.gitlab.domain:
-
-```
-git config --global gitopen.gitlab.domain [yourdomain.here]
-# or
-git config gitopen.gitlab.domain [yourdomain.here] # in your local repository
-```
-
 
 ## Thx
 @jasonmccreary did [all the hard work](https://github.com/jasonmccreary/gh)
+Paul Irish
 
 ## License
 
-Copyright Jason McCreary & Paul Irish. Licensed under MIT.
+Copyright Joe Ennever. Licensed under MIT.
 
 http://opensource.org/licenses/MIT
