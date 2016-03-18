@@ -9,10 +9,10 @@ Type `git pr` to open the GitHub page or website to open a PR for the current br
     $ git pr
     > open https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/compare/CURRENT_BRANCH?expand=1
 
-    $ git open upstream
+    $ git pr upstream
     > open https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/tree/CURRENT_BRANCH
 
-    $ git open upstream master
+    $ git pr upstream master
     > open https://github.com/REMOTE_UPSTREAM_USER/CURRENT_REPO/tree/master
 
 
