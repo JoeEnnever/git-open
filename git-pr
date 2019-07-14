@@ -59,17 +59,19 @@ elif grep -q github <<<$giturl; then
 
   # handle SSH protocol (links like ssh://git@github.com/user/repo)
   giturl=${giturl/#ssh\:\/\/git\@github\.com\//https://github.com/}
+  giturl=${giturl%\.git}
+  giturl="${giturl}/compare/${branch}?expand=1"
 
+  # simplify URL for master
+  giturl=${giturl/tree\/master/}
+
+elif grep -q dev.azure <<<$giturl; then
+  giturl=$(echo ${giturl} | sed -E -e "s#git\@ssh.dev.azure.com:v3/(.+)/(.+)/(.+)#https://dev.azure.com/\1/\2/_git/\3/pullrequestcreate?sourceRef=${branch}#g")
 else
   echo "Sorry, only github urls supported, not $giturl"
   exit 1
 fi
 
-giturl=${giturl%\.git}
-giturl="${giturl}/compare/${branch}?expand=1"
-
-# simplify URL for master
-giturl=${giturl/tree\/master/}
 
 # get current open browser command
 case $( uname -s ) in
@@ -82,4 +84,3 @@ esac
 # open it in a browser
 $open "$giturl" &> /dev/null
 exit 0
-
